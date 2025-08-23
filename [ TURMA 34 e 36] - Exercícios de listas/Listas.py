@@ -85,4 +85,33 @@ def atv11():
     for linha in tabuleiro:
         print(" ".join(linha))
 
-atv11()
+def menu():
+    
+    switch ={
+        "1": atv1, "2": atv2, "3": atv3,"4": atv4,
+        "5": atv5,"6": atv6,"7": atv7,"8": atv8,
+        "9": atv9,"10": atv10,"11": atv11 
+    }
+    
+    print("===== MENU DE ATIVIDADES =====")
+    print("1  - Criar lista de livros e exibir")
+    print("2  - Exibir primeiro e último livro")
+    print("3  - Adicionar livros com append()")
+    print("4  - Inserir livro 'Duna' na segunda posição")
+    print("5  - Remover livro 'Silêncio dos inocentes'")
+    print("6  - Contar quantas vezes o número 2 aparece")
+    print("7  - Exibir cada livro como interessante")
+    print("8  - Exibir idades maiores ou iguais a 18")
+    print("9  - Calcular soma manual dos valores")
+    print("10 - Receber notas de alunos e calcular média")
+    print("11 - Criar e exibir tabuleiro de xadrez")
+    print("===============================")
+
+    escolha = input("Digite o número da opção desejada: ")
+    acao = switch.get(escolha)
+    if acao:
+        acao()
+    else:
+        print("Opção Invalida")
+
+menu()
