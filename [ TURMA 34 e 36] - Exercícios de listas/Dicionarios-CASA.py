@@ -44,30 +44,27 @@ else:
     print("A chave 'telefone' não existe no dicionário.")
 
 #6
-palavras = [
-    "maçã", 
-    "banana",
-    "maçã",
-    "laranja",
-    "banana",
-    "maçã"
-]
+def contar_frutas(palavras):
+    somas = {
+        "somaMaça": 0,
+        "SomaBanana": 0,
+        "SomaLaranja": 0,
+    }
 
-somas = {
-    "somaMaça": 0,
-    "SomaBanana": 0,
-    "SomaLaranja": 0,
-}
+    for fruta in palavras:
+        if fruta == 'maçã':
+            somas["somaMaça"] += 1
+        elif fruta == 'banana':
+            somas["SomaBanana"] += 1
+        elif fruta == 'laranja':
+            somas["SomaLaranja"] += 1
 
-for fruta in palavras:
-    if fruta == 'maçã':
-        somas["somaMaça"] += 1
-    elif fruta == 'banana':
-        somas["SomaBanana"] += 1
-    elif fruta == 'laranja':
-        somas["SomaLaranja"] += 1
-        
-print(f"Total: {somas}")   
+    return somas
+
+palavras = ["maçã", "banana","maçã","laranja","banana","maçã"]
+resultado = contar_frutas(palavras)
+
+print(f"Total: {resultado}")   
 
 
 
@@ -104,10 +101,8 @@ def double_disc(disc1, disc2):
 d1 = {'a': 1, 'b': 2}
 d2 = {'b': 3, 'c': 4}
 
-print("TESSSSSS")
 result = double_disc(d1, d2)
 print(result)
-
 
 #10
 def bubble_sort(array):
